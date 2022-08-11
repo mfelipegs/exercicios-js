@@ -7,23 +7,39 @@
     <title>Herois Marvel JS</title>
     <script type="text/javascript">
         function promptMarvel() {
+            let heroisMarvel = {
+                capitaoAmerica: "capitão américa",
+                doutorEstranho: "doutor estranho",
+                homemDeFerro: "homem de ferro",
+                hulk: "hulk",
+                thor: "thor"
+            };
+
+            let heroisDC = {
+                batman: "batman",
+                superman: "superman",
+                atom: "atom",
+                aquaman: "aquaman",
+                flash: "flash"
+            };
+
             let produtora = prompt("Digite a produtora, Marvel ou DC.").toLowerCase();
 
             if (produtora == "marvel") {
                 let heroi = prompt("Digite o herói que você quer: Capitão América, Thor, Hulk, Doutor Estranho ou Homem de Ferro.").toLowerCase(); 
-                    if (heroi == "capitão américa") {
+                    if (heroi == heroisMarvel.capitaoAmerica) {
                         document.write("<img src='src/img/capt.jpg'>");
                         }
-                    else if (heroi == "doutor estranho") {
+                    else if (heroi == heroisMarvel.doutorEstranho) {
                         document.write("<img src='src/img/doutor_estranho.jpg'>");
                         }
-                    else if (heroi == "homem de ferro") {
+                    else if (heroi == heroisMarvel.homemDeFerro) {
                         document.write("<img src='src/img/ironman.jpg'>");
                         }
-                    else if (heroi == "hulk") {
+                    else if (heroi == heroisMarvel.hulk) {
                         document.write("<img src='src/img/hulk.jpg'>");
                     }
-                    else if (heroi == "thor") {
+                    else if (heroi == heroisMarvel.thor) {
                         document.write("<img src='src/img/thor.jpg'>");
                     }
                     else {
@@ -37,16 +53,16 @@
                     if (heroi == "batman") {
                         document.write("<img src='src/img/batman.jpg'>");
                         }
-                    else if (heroi == "superman") {
+                    else if (heroi == heroisDC.superman) {
                         document.write("<img src='src/img/superman.jpg'>");
                         }
-                    else if (heroi == "atom") {
+                    else if (heroi == heroisDC.atom) {
                         document.write("<img src='src/img/atom.jpg'>");
                         }
-                    else if (heroi == "aquaman") {
+                    else if (heroi == heroisDC.aquaman) {
                         document.write("<img src='src/img/aquaman.jpg'>");
                         }
-                    else if (heroi == "flash") {
+                    else if (heroi == heroisDC.flash) {
                         document.write("<img src='src/img/flash.jpg'>");
                         }
                     else {

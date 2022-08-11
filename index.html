@@ -1,48 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Herois Marvel JS</title>
     <script type="text/javascript">
-        
-        let produtora = prompt("Digite a produtora, Marvel ou DC.");
+        function promptMarvel() {
+            let produtora = prompt("Digite a produtora, Marvel ou DC.").toLowerCase();
 
-        if (produtora == "Marvel") {
+            if (produtora == "marvel") {
+                let heroi = prompt("Digite o herói que você quer: Capitão América, Thor, Hulk, Doutor Estranho ou Homem de Ferro.").toLowerCase(); 
+                    if (heroi == "capitão américa") {
+                        document.write("<img src='src/img/capt.jpg'>");
+                        }
+                    else if (heroi == "doutor estranho") {
+                        document.write("<img src='src/img/doutor_estranho.jpg'>");
+                        }
+                    else if (heroi == "homem de ferro") {
+                        document.write("<img src='src/img/ironman.jpg'>");
+                        }
+                    else if (heroi == "hulk") {
+                        document.write("<img src='src/img/hulk.jpg'>");
+                    }
+                    else if (heroi == "thor") {
+                        document.write("<img src='src/img/thor.jpg'>");
+                    }
+                    else {
+                        document.write("Não é um herói disponível da Marvel.");
+                        }
+            }
+                
+                
+            else if (produtora == "dc") {
+                let heroi = prompt("Digite o herói que você quer da DC: Batman, Superman, Aquaman, Flash ou Atom.").toLowerCase();
+                    if (heroi == "batman") {
+                        document.write("<img src='src/img/batman.jpg'>");
+                        }
+                    else if (heroi == "superman") {
+                        document.write("<img src='src/img/superman.jpg'>");
+                        }
+                    else if (heroi == "atom") {
+                        document.write("<img src='src/img/atom.jpg'>");
+                        }
+                    else if (heroi == "aquaman") {
+                        document.write("<img src='src/img/aquaman.jpg'>");
+                        }
+                    else if (heroi == "flash") {
+                        document.write("<img src='src/img/flash.jpg'>");
+                        }
+                    else {
+                        document.write("Não é um herói disponível da DC.");
+                        }
+            }
 
-            let heroi = prompt("Digite o herói que você quer: Capitão América, Doutor Estranho ou Homem de Ferro."); 
-                if (heroi == "Capitão América") {
-                    document.write("<img src='src/img/capt.jpg'>");
-                    }
-                else if (heroi == "Doutor Estranho") {
-                    document.write("<img src='src/img/doutor_estranho.jpg'>");
-                    }
-                else if (heroi == "Homem de Ferro") {
-                    document.write("<img src='src/img/ironman.jpg'>");
-                    }
-                else {
-                    document.write("Não é um herói disponível da Marvel.");
-                    }
-        }
-            
-            
-        if (produtora == "DC") {
+            else {
+                promptMarvel();
+            }
+    }
 
-            let heroi = prompt("Digite o herói que você quer: Batman, Superman ou Atom.");
-                if (heroi == "Batman") {
-                    document.write("<img src='src/img/batman.jpg'>");
-                    }
-                else if (heroi == "Superman") {
-                    document.write("<img src='src/img/superman.jpg'>");
-                    }
-                else if (heroi == "Atom") {
-                    document.write("<img src='src/img/atom.jpg'>");
-                    }
-                else {
-                    document.write("Não é um herói disponível da DC.");
-                    }
-        }
+    promptMarvel();
     </script>
 </head>
 <body>
